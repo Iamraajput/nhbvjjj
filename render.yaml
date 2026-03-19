@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: thunder-filetolink
+    runtime: python
+    plan: standard
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m Thunder
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      - key: PORT
+        value: 10000
+      - key: BIND_ADDRESS
+        value: 0.0.0.0
+      - key: NO_PORT
+        value: True
+      - key: HAS_SSL
+        value: True
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: BIN_CHANNEL
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: GROUP_DATABASE_ID
+        sync: false
+      - key: OWNER_ID
+        sync: false
+      - key: BASE_URL
+        sync: false
