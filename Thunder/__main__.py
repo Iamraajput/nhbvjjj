@@ -117,6 +117,7 @@ async def start_services():
         return
 
     print("   ▶ Starting Telegram Bot initialization...")
+    bot_initialized = False
     try:
         try:
             await StreamBot.start()
@@ -134,6 +135,7 @@ async def start_services():
         
         StreamBot.username = bot_info.username
         print(f"   ✓ Bot initialized successfully as @{StreamBot.username}")
+        bot_initialized = True
 
         await set_commands()
         print("   ✓ Bot commands set successfully.")
@@ -164,105 +166,106 @@ async def start_services():
                 logger.error(
                     f"Error processing restart message: {e}", exc_info=True
                 )
-        else:
-            pass
 
     except Exception as e:
         logger.error(
             f"   ✖ Failed to initialize Telegram Bot: {e}", exc_info=True
         )
-        return
+        print("   ⚠ Continuing without bot - web server is still running")
+        # Don't return - keep web server running for health checks
 
-    print("   ▶ Starting Client initialization...")
-    try:
-        await initialize_clients()
-    except Exception as e:
-        logger.error(f"   ✖ Failed to initialize clients: {e}", exc_info=True)
-        return
-
-    await import_plugins()
-
-    print("   ▶ Starting Request Executor initialization...")
-    try:
-        request_executor_task = asyncio.create_task(
-            request_executor(), name="request_executor_task"
-        )
-        print("   ✓ Request executor service started")
-    except Exception as e:
-        logger.error(
-            f"   ✖ Failed to start request executor: {e}", exc_info=True
-        )
-        return
-
-    # Start background tasks (web server already started)
-    try:
-        keepalive_task = asyncio.create_task(
-            ping_server(), name="keepalive_task"
-        )
-        print("   ✓ Keep-alive service started")
-        token_cleanup_task = asyncio.create_task(
-            schedule_token_cleanup(), name="token_cleanup_task"
-        )
-
-    except Exception as e:
-        logger.error(f"   ✖ Failed to start background tasks: {e}", exc_info=True)
-        if 'request_executor_task' in locals() and not request_executor_task.done():
-            request_executor_task.cancel()
-            try:
-                await request_executor_task
-            except asyncio.CancelledError:
-                pass
+    # Only initialize clients and plugins if bot started successfully
+    if bot_initialized:
+        print("   ▶ Starting Client initialization...")
         try:
-            await StreamBot.stop()
-        except Exception:
-            pass
+            await initialize_clients()
+        except Exception as e:
+            logger.error(f"   ✖ Failed to initialize clients: {e}", exc_info=True)
+            # Don't return - keep web server running
+        
+        await import_plugins()
+
+        print("   ▶ Starting Request Executor initialization...")
         try:
-            await cleanup_clients()
-        except Exception:
-            pass
+            request_executor_task = asyncio.create_task(
+                request_executor(), name="request_executor_task"
+            )
+            print("   ✓ Request executor service started")
+        except Exception as e:
+            logger.error(
+                f"   ✖ Failed to start request executor: {e}", exc_info=True
+            )
+
+        # Start background tasks (web server already started)
         try:
-            await rate_limiter.shutdown()
-        except Exception:
-            pass
-        return
+            keepalive_task = asyncio.create_task(
+                ping_server(), name="keepalive_task"
+            )
+            print("   ✓ Keep-alive service started")
+            token_cleanup_task = asyncio.create_task(
+                schedule_token_cleanup(), name="token_cleanup_task"
+            )
 
-    elapsed_time = (datetime.now() - start_time).total_seconds()
-    print("╠═══════════════════════════════════════════════════════════╣")
-    print(f"   ▶ Bot Name: {bot_info.first_name}")
-    print(f"   ▶ Username: @{bot_info.username}")
-    print(f"   ▶ Server: {bind_address}:{Var.PORT}")
-    print(f"   ▶ Startup Time: {elapsed_time:.2f} seconds")
-    print("╚═══════════════════════════════════════════════════════════╝")
-    print("   ▶ Bot is now running! Press CTRL+C to stop.")
+        except Exception as e:
+            logger.error(f"   ✖ Failed to start background tasks: {e}", exc_info=True)
+    else:
+        print("   ⚠ Skipping bot-dependent services (bot not initialized)")
 
-    background_tasks = [
-        request_executor_task,
-        keepalive_task,
-        token_cleanup_task
-    ]
-
+    # Keep the server running
     try:
-        await idle()
+        if bot_initialized:
+            elapsed_time = (datetime.now() - start_time).total_seconds()
+            print("╠═══════════════════════════════════════════════════════════╣")
+            print(f"   ▶ Bot Name: {bot_info.first_name}")
+            print(f"   ▶ Username: @{bot_info.username}")
+            print(f"   ▶ Server: {bind_address}:{Var.PORT}")
+            print(f"   ▶ Startup Time: {elapsed_time:.2f} seconds")
+            print("╚═══════════════════════════════════════════════════════════╝")
+            print("   ▶ Bot is now running! Press CTRL+C to stop.")
+            
+            # Only idle if bot was initialized
+            await idle()
+        else:
+            # Bot not initialized, just keep server alive
+            print("╠═══════════════════════════════════════════════════════════╣")
+            print(f"   ▶ Server: {bind_address}:{Var.PORT}")
+            print("   ▶ Web server running (bot not initialized)")
+            print("╚═══════════════════════════════════════════════════════════╝")
+            while True:
+                await asyncio.sleep(3600)
+                
+    except asyncio.CancelledError:
+        print("\n╔═══════════════════════════════════════════════════════════╗")
+        print("║              Shutting down services...                    ║")
+        print("╚═══════════════════════════════════════════════════════════╝")
     finally:
-        print("   ▶ Shutting down services...")
+        print("   ▶ Cleaning up...")
+        
+        if bot_initialized:
+            # Cleanup bot-related tasks
+            background_tasks = [
+                request_executor_task,
+                keepalive_task,
+                token_cleanup_task
+            ]
+            
+            for task in background_tasks:
+                if 'task' in locals() and not task.done():
+                    task.cancel()
+                    try:
+                        await task
+                    except asyncio.CancelledError:
+                        pass
 
-        for task in background_tasks:
-            if not task.done():
-                task.cancel()
-                try:
-                    await task
-                except asyncio.CancelledError:
-                    pass
+            try:
+                await rate_limiter.shutdown()
+            except Exception as e:
+                logger.error(f"Error during rate limiter cleanup: {e}")
 
-        try:
-            await rate_limiter.shutdown()
-        except Exception as e:
-            logger.error(f"Error during rate limiter cleanup: {e}")
-
-        try:
-            await cleanup_clients()
-        except Exception as e:
-            logger.error(f"Error during client cleanup: {e}")
+            try:
+                await cleanup_clients()
+            except Exception as e:
+                logger.error(f"Error during client cleanup: {e}")
 
         if 'app_runner' in locals() and app_runner is not None:
             try:
