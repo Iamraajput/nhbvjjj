@@ -100,6 +100,22 @@ async def start_services():
     print_banner()
     print("╔════════════════ INITIALIZING BOT SERVICES ════════════════╗")
 
+    # START WEB SERVER FIRST (required for Render health check)
+    print("   ▶ Starting Web Server initialization...")
+    print(f"   ▶ Binding to {Var.BIND_ADDRESS}:{Var.PORT}")
+    
+    app_runner = None
+    try:
+        app_runner = web.AppRunner(await web_server())
+        await app_runner.setup()
+        bind_address = Var.BIND_ADDRESS
+        site = web.TCPSite(app_runner, bind_address, Var.PORT)
+        await site.start()
+        print(f"   ✓ Web Server started on http://{bind_address}:{Var.PORT}")
+    except Exception as e:
+        logger.error(f"   ✖ CRITICAL: Failed to start Web Server: {e}", exc_info=True)
+        return
+
     print("   ▶ Starting Telegram Bot initialization...")
     try:
         try:
@@ -178,14 +194,8 @@ async def start_services():
         )
         return
 
-    print("   ▶ Starting Web Server initialization...")
+    # Start background tasks (web server already started)
     try:
-        app_runner = web.AppRunner(await web_server())
-        await app_runner.setup()
-        bind_address = Var.BIND_ADDRESS
-        site = web.TCPSite(app_runner, bind_address, Var.PORT)
-        await site.start()
-
         keepalive_task = asyncio.create_task(
             ping_server(), name="keepalive_task"
         )
@@ -195,7 +205,7 @@ async def start_services():
         )
 
     except Exception as e:
-        logger.error(f"   ✖ Failed to start Web Server: {e}", exc_info=True)
+        logger.error(f"   ✖ Failed to start background tasks: {e}", exc_info=True)
         if 'request_executor_task' in locals() and not request_executor_task.done():
             request_executor_task.cancel()
             try:
@@ -281,6 +291,9 @@ if __name__ == '__main__':
         print("║                   Bot stopped by user (CTRL+C)            ║")
         print("╚═══════════════════════════════════════════════════════════╝")
     except Exception as e:
-        logger.error(f"An unexpected error occurred: {e}")
+        logger.error(f"An unexpected error occurred: {e}", exc_info=True)
+        # Keep the process alive for debugging on Render
+        import time
+        time.sleep(60)
     finally:
         loop.close()

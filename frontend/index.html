@@ -627,34 +627,112 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1 id="gallery-title">Video Gallery</h1>
-            <p class="subtitle">Watch videos from our collection</p>
-        </header>
-        
-        <div id="gallery-content">
-            <div class="loading">
-                <div class="spinner"></div>
-                <p>Loading videos...</p>
+    <!-- SVG Gradients -->
+    <svg width="0" height="0" style="position:absolute">
+        <defs>
+            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#667eea"/>
+                <stop offset="100%" style="stop-color:#764ba2"/>
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+                    </svg>
+                    <span>StreamVault</span>
+                </div>
             </div>
         </div>
-    </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+                </svg>
+                <span>Free HD Streaming</span>
+            </div>
+            <h1>Watch <span>Premium Videos</span><br>Anytime, Anywhere</h1>
+            <p class="hero-subtitle">Discover our curated collection of high-quality videos. Stream instantly with no buffering.</p>
+            
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-value" id="video-count">0</div>
+                    <div class="stat-label">Videos</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">HD</div>
+                    <div class="stat-label">Quality</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">Free</div>
+                    <div class="stat-label">Forever</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Search -->
+        <div class="controls">
+            <div class="search-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="m21 21-4.35-4.35"/>
+                </svg>
+                <input type="text" id="search-input" placeholder="Search videos..." oninput="filterVideos()">
+            </div>
+        </div>
+
+        <!-- Gallery -->
+        <div id="gallery-content">
+            <div class="loading-container">
+                <div class="spinner"></div>
+                <p style="color: var(--text-secondary);">Loading amazing videos...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 StreamVault. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
     
     <!-- Video Player Modal -->
     <div id="video-modal" class="modal">
         <div class="modal-content">
-            <button class="modal-close" onclick="closeModal()">&times;</button>
-            <video id="video-player" controls autoplay>
+            <button class="modal-close" onclick="closeModal()" aria-label="Close video">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+            <video id="video-player" controls autoplay playsinline>
                 <source src="" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+            <div class="video-title-bar">
+                <h3 id="modal-video-title">Video Title</h3>
+            </div>
         </div>
     </div>
 
     <script>
         // CONFIGURATION - Change this to your VPS backend URL
         const API_BASE_URL = 'http://127.0.0.1:8000';
+        
+        let allVideos = [];
         
         // Load gallery data
         async function loadGallery() {
@@ -673,76 +751,125 @@
                     throw new Error(data.error);
                 }
                 
-                // Update title
-                if (data.gallery_title) {
-                    document.getElementById('gallery-title').textContent = data.gallery_title;
-                    document.title = data.gallery_title;
-                }
+                // Store videos for search
+                allVideos = data.videos || [];
+                
+                // Update video count
+                document.getElementById('video-count').textContent = allVideos.length;
                 
                 // Render videos
-                if (!data.videos || data.videos.length === 0) {
+                if (!allVideos.length) {
                     galleryContent.innerHTML = `
-                        <div class="empty">
-                            <h2>No videos found</h2>
-                            <p>Add videos to topics in the database group to see them here.</p>
+                        <div class="empty-container">
+                            <div class="empty-icon">📹</div>
+                            <h2>No Videos Yet</h2>
+                            <p>Add videos to your Telegram group topics and they will appear here automatically.</p>
                         </div>
                     `;
                     return;
                 }
                 
-                const galleryHTML = `
-                    <div class="gallery">
-                        ${data.videos.map(video => `
-                            <div class="video-card" onclick="playVideo('${video.stream_url}', '${escapeHtml(video.title)}')">
-                                <div class="thumbnail">
-                                    ${video.thumbnail_url ? 
-                                        `<img src="${video.thumbnail_url}" alt="${escapeHtml(video.title)}" loading="lazy">` :
-                                        `<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                                            <span style="font-size: 3rem;">🎬</span>
-                                        </div>`
-                                    }
-                                    <div class="play-button">
-                                        <svg viewBox="0 0 24 24">
-                                            <path d="M8 5v14l11-7z"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="video-info">
-                                    <div class="video-title">${escapeHtml(video.title)}</div>
-                                    ${video.created_at ? `<div class="video-date">${formatDate(video.created_at)}</div>` : ''}
-                                </div>
-                            </div>
-                        `).join('')}
-                    </div>
-                `;
-                
-                galleryContent.innerHTML = galleryHTML;
+                renderGallery(allVideos);
                 
             } catch (error) {
                 console.error('Error loading gallery:', error);
                 galleryContent.innerHTML = `
-                    <div class="error">
-                        <h2>Error loading gallery</h2>
-                        <p>${escapeHtml(error.message)}</p>
-                        <p style="margin-top: 20px; font-size: 0.9rem;">
-                            Make sure the API_BASE_URL is configured correctly.
-                        </p>
+                    <div class="error-container">
+                        <div class="error-icon">⚠️</div>
+                        <h2>Connection Error</h2>
+                        <p>Unable to load videos. Please check your connection and try again.</p>
+                        <button class="retry-btn" onclick="loadGallery()">Try Again</button>
                     </div>
                 `;
             }
+        }
+        
+        // Filter videos based on search
+        function filterVideos() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const filtered = allVideos.filter(video => 
+                video.title.toLowerCase().includes(searchTerm)
+            );
+            renderGallery(filtered);
+        }
+        
+        // Render gallery
+        function renderGallery(videos) {
+            const galleryContent = document.getElementById('gallery-content');
+            
+            if (videos.length === 0) {
+                galleryContent.innerHTML = `
+                    <div class="empty-container">
+                        <div class="empty-icon">🔍</div>
+                        <h2>No Videos Found</h2>
+                        <p>No videos match your search. Try different keywords.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            const galleryHTML = `
+                <div class="gallery">
+                    ${videos.map((video, index) => `
+                        <article class="video-card" onclick="playVideo('${video.stream_url}', '${escapeHtml(video.title)}')" style="animation: fadeInUp 0.6s ease ${index * 0.05}s both">
+                            <div class="thumbnail">
+                                ${video.thumbnail_url ? 
+                                    `<img src="${video.thumbnail_url}" alt="${escapeHtml(video.title)}" loading="lazy" decoding="async">` :
+                                    `<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                        <span style="font-size: 3rem;">🎬</span>
+                                    </div>`
+                                }
+                                <div class="thumbnail-overlay"></div>
+                                <div class="play-button">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </div>
+                                <span class="duration">HD</span>
+                            </div>
+                            <div class="video-info">
+                                <h3 class="video-title">${escapeHtml(video.title)}</h3>
+                                <div class="video-meta">
+                                    <span>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                            <line x1="16" y1="2" x2="16" y2="6"/>
+                                            <line x1="8" y1="2" x2="8" y2="6"/>
+                                            <line x1="3" y1="10" x2="21" y2="10"/>
+                                        </svg>
+                                        ${video.created_at ? formatDate(video.created_at) : 'Recently added'}
+                                    </span>
+                                    <span>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polygon points="23 7 16 12 23 17 23 7"/>
+                                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                                        </svg>
+                                        Play Now
+                                    </span>
+                                </div>
+                            </div>
+                        </article>
+                    `).join('')}
+                </div>
+            `;
+            
+            galleryContent.innerHTML = galleryHTML;
         }
         
         // Play video in modal
         function playVideo(url, title) {
             const modal = document.getElementById('video-modal');
             const player = document.getElementById('video-player');
+            const titleEl = document.getElementById('modal-video-title');
             
             player.src = url;
             player.load();
+            titleEl.textContent = title;
             modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
             
             // Update page title
-            document.title = `${title} - Video Gallery`;
+            document.title = `${title} - StreamVault`;
         }
         
         // Close modal
@@ -753,10 +880,10 @@
             player.pause();
             player.src = '';
             modal.classList.remove('active');
+            document.body.style.overflow = '';
             
             // Restore original title
-            const galleryTitle = document.getElementById('gallery-title').textContent;
-            document.title = galleryTitle;
+            document.title = 'Video Gallery - Watch Free Videos Online | Stream HD Content';
         }
         
         // Close modal on background click
@@ -796,7 +923,10 @@
         }
         
         // Load gallery on page load
-        loadGallery();
+        document.addEventListener('DOMContentLoaded', loadGallery);
+        
+        // Refresh gallery every 30 seconds for new videos
+        setInterval(loadGallery, 30000);
     </script>
 </body>
 </html>
