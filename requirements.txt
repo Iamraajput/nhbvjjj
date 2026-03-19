@@ -1,0 +1,9 @@
+aiohttp
+cloudscraper
+Jinja2
+pyrofork
+pymongo
+psutil
+python-dotenv
+speedtest-cli
+tgcrypto

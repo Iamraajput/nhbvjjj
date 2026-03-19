@@ -1,0 +1,811 @@
+2026-03-19 13:00:37,608 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 13:02:48,458 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 13:04:39,826 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 13:04:51,891 - ThunderBot - ERROR - Database error in log_newusr for user 7555349906: Peer id invalid: -1002866329325
+2026-03-19 13:04:59,094 - ThunderBot - ERROR - Error fwd_media copy: Peer id invalid: -1002866329325
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\methods\advanced\resolve_peer.py", line 62, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\storage\sqlite_storage.py", line 142, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: -1002866329325'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\bot\plugins\stream.py", line 42, in fwd_media
+    return await m_msg.copy(chat_id=Var.BIN_CHANNEL)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\types\messages_and_media\message.py", line 3174, in copy
+    return await send_media(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\methods\messages\send_cached_media.py", line 103, in send_cached_media
+    peer=await self.resolve_peer(chat_id),
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\methods\advanced\resolve_peer.py", line 89, in resolve_peer
+    peer_type = utils.get_peer_type(peer_id)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\utils.py", line 246, in get_peer_type
+    raise ValueError(f"Peer id invalid: {peer_id}")
+ValueError: Peer id invalid: -1002866329325
+2026-03-19 13:04:59,100 - ThunderBot - ERROR - Failed to forward media for message 1160. Skipping.
+2026-03-19 13:06:53,124 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 13:06:53,308 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 13:07:40,875 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 13:07:41,069 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 13:07:44,908 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 13:07:52,917 - ThunderBot - DEBUG - User 7555349906 within rate limits, executing immediately.
+2026-03-19 13:07:53,483 - ThunderBot - ERROR - Error fwd_media copy: Peer id invalid: -1002866329325
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\methods\advanced\resolve_peer.py", line 62, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\storage\sqlite_storage.py", line 142, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: -1002866329325'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\bot\plugins\stream.py", line 42, in fwd_media
+    return await m_msg.copy(chat_id=Var.BIN_CHANNEL)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\types\messages_and_media\message.py", line 3174, in copy
+    return await send_media(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\methods\messages\send_cached_media.py", line 103, in send_cached_media
+    peer=await self.resolve_peer(chat_id),
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\methods\advanced\resolve_peer.py", line 89, in resolve_peer
+    peer_type = utils.get_peer_type(peer_id)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\utils.py", line 246, in get_peer_type
+    raise ValueError(f"Peer id invalid: {peer_id}")
+ValueError: Peer id invalid: -1002866329325
+2026-03-19 13:07:53,485 - ThunderBot - ERROR - Failed to forward media for message 1162. Skipping.
+2026-03-19 13:11:11,508 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 13:11:11,734 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 13:11:15,436 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 13:11:19,150 - ThunderBot - DEBUG - User 7555349906 within rate limits, executing immediately.
+2026-03-19 13:11:19,636 - ThunderBot - ERROR - Error fwd_media copy: Peer id invalid: -1002866329325
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\methods\advanced\resolve_peer.py", line 62, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\storage\sqlite_storage.py", line 142, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: -1002866329325'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\bot\plugins\stream.py", line 42, in fwd_media
+    return await m_msg.copy(chat_id=Var.BIN_CHANNEL)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\types\messages_and_media\message.py", line 3174, in copy
+    return await send_media(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\methods\messages\send_cached_media.py", line 103, in send_cached_media
+    peer=await self.resolve_peer(chat_id),
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\methods\advanced\resolve_peer.py", line 89, in resolve_peer
+    peer_type = utils.get_peer_type(peer_id)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\utils.py", line 246, in get_peer_type
+    raise ValueError(f"Peer id invalid: {peer_id}")
+ValueError: Peer id invalid: -1002866329325
+2026-03-19 13:11:19,639 - ThunderBot - ERROR - Failed to forward media for message 1164. Skipping.
+2026-03-19 13:11:57,595 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 13:11:57,791 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 13:12:01,520 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 13:12:08,370 - ThunderBot - DEBUG - User 7555349906 within rate limits, executing immediately.
+2026-03-19 13:12:08,841 - ThunderBot - ERROR - Error fwd_media copy: Peer id invalid: -1002866329325
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\methods\advanced\resolve_peer.py", line 62, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\storage\sqlite_storage.py", line 142, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: -1002866329325'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\bot\plugins\stream.py", line 42, in fwd_media
+    return await m_msg.copy(chat_id=Var.BIN_CHANNEL)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\types\messages_and_media\message.py", line 3174, in copy
+    return await send_media(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\methods\messages\send_cached_media.py", line 103, in send_cached_media
+    peer=await self.resolve_peer(chat_id),
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\methods\advanced\resolve_peer.py", line 89, in resolve_peer
+    peer_type = utils.get_peer_type(peer_id)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\utils.py", line 246, in get_peer_type
+    raise ValueError(f"Peer id invalid: {peer_id}")
+ValueError: Peer id invalid: -1002866329325
+2026-03-19 13:12:08,843 - ThunderBot - ERROR - Failed to forward media for message 1166. Skipping.
+2026-03-19 13:13:44,738 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 13:13:44,956 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 13:13:48,634 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 13:14:03,359 - ThunderBot - DEBUG - User 7555349906 within rate limits, executing immediately.
+2026-03-19 13:14:03,847 - ThunderBot - DEBUG - Initial resolve_peer failed for -1003889334129: Peer id invalid: -1003889334129
+2026-03-19 13:14:03,847 - ThunderBot - ERROR - Error fwd_media copy to -1003889334129: Peer id invalid: -1003889334129
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\methods\advanced\resolve_peer.py", line 62, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\storage\sqlite_storage.py", line 142, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: -1003889334129'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\bot\plugins\stream.py", line 48, in fwd_media
+    return await m_msg.copy(chat_id=Var.BIN_CHANNEL)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\types\messages_and_media\message.py", line 3174, in copy
+    return await send_media(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\methods\messages\send_cached_media.py", line 103, in send_cached_media
+    peer=await self.resolve_peer(chat_id),
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\methods\advanced\resolve_peer.py", line 89, in resolve_peer
+    peer_type = utils.get_peer_type(peer_id)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\utils.py", line 246, in get_peer_type
+    raise ValueError(f"Peer id invalid: {peer_id}")
+ValueError: Peer id invalid: -1003889334129
+2026-03-19 13:14:03,849 - ThunderBot - ERROR - Failed to forward media for message 1170. Skipping.
+2026-03-19 13:19:43,747 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 13:19:43,967 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 13:19:48,052 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 13:20:34,850 - ThunderBot - DEBUG - User 7555349906 within rate limits, executing immediately.
+2026-03-19 13:20:35,738 - ThunderBot - ERROR - Error processing single file for message 1174: Telegram says: [400 BUTTON_URL_INVALID] - The button url is invalid (caused by "messages.SendMessage")
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\bot\plugins\stream.py", line 419, in process_single
+    await send_link(msg, links)
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\bot\plugins\stream.py", line 166, in send_link
+    await msg.reply_text(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\types\messages_and_media\message.py", line 970, in reply_text
+    return await self._client.send_message(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\methods\messages\send_message.py", line 126, in send_message
+    r = await self.invoke(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\methods\advanced\invoke.py", line 79, in invoke
+    r = await self.session.invoke(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\session\session.py", line 389, in invoke
+    return await self.send(query, timeout=timeout)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\session\session.py", line 357, in send
+    RPCError.raise_it(result, type(data))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\errors\rpc_error.py", line 91, in raise_it
+    raise getattr(
+pyrogram.errors.exceptions.bad_request_400.ButtonUrlInvalid: Telegram says: [400 BUTTON_URL_INVALID] - The button url is invalid (caused by "messages.SendMessage")
+2026-03-19 13:22:10,630 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 13:22:10,839 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 13:22:15,319 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 13:22:23,133 - ThunderBot - DEBUG - User 7555349906 within rate limits, executing immediately.
+2026-03-19 13:22:24,041 - ThunderBot - ERROR - Error processing single file for message 1179: Telegram says: [400 BUTTON_URL_INVALID] - The button url is invalid (caused by "messages.SendMessage")
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\bot\plugins\stream.py", line 419, in process_single
+    await send_link(msg, links)
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\bot\plugins\stream.py", line 166, in send_link
+    await msg.reply_text(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\types\messages_and_media\message.py", line 970, in reply_text
+    return await self._client.send_message(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\methods\messages\send_message.py", line 126, in send_message
+    r = await self.invoke(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\methods\advanced\invoke.py", line 79, in invoke
+    r = await self.session.invoke(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\session\session.py", line 389, in invoke
+    return await self.send(query, timeout=timeout)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\session\session.py", line 357, in send
+    RPCError.raise_it(result, type(data))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\errors\rpc_error.py", line 91, in raise_it
+    raise getattr(
+pyrogram.errors.exceptions.bad_request_400.ButtonUrlInvalid: Telegram says: [400 BUTTON_URL_INVALID] - The button url is invalid (caused by "messages.SendMessage")
+2026-03-19 13:25:53,068 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 13:26:05,973 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 13:26:06,330 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 13:26:10,318 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 13:26:12,293 - ThunderBot - DEBUG - User 7555349906 within rate limits, executing immediately.
+2026-03-19 13:26:13,357 - ThunderBot - ERROR - Error processing single file for message 1181: 'User' object has no attribute 'full_name'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\bot\plugins\stream.py", line 426, in process_single
+    source_info = source_msg.from_user.full_name
+AttributeError: 'User' object has no attribute 'full_name'
+2026-03-19 13:26:52,976 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 13:26:53,185 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 13:26:57,200 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 13:26:58,120 - ThunderBot - DEBUG - User 7555349906 within rate limits, executing immediately.
+2026-03-19 13:30:21,830 - ThunderBot - DEBUG - User 7555349906 within rate limits, executing immediately.
+2026-03-19 13:32:20,978 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 13:32:21,209 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 13:32:25,306 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 13:32:26,942 - ThunderBot - DEBUG - User 7555349906 within rate limits, executing immediately.
+2026-03-19 13:37:27,151 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 13:37:27,427 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 13:37:31,509 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 13:37:33,877 - ThunderBot - DEBUG - User 7555349906 within rate limits, executing immediately.
+2026-03-19 13:51:31,908 - ThunderBot - WARNING - Ping to https://light-mice-add.loca.lt/ returned status 503.
+2026-03-19 13:56:10,930 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 13:56:11,198 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 13:56:15,347 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 13:56:25,702 - ThunderBot - DEBUG - User 7555349906 within rate limits, executing immediately.
+2026-03-19 13:59:04,234 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 13:59:04,447 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 13:59:07,758 - ThunderBot - DEBUG - User 7555349906 within rate limits, executing immediately.
+2026-03-19 13:59:29,710 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 13:59:29,908 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 13:59:33,889 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 13:59:36,226 - ThunderBot - DEBUG - User 7555349906 within rate limits, executing immediately.
+2026-03-19 13:59:37,452 - ThunderBot - ERROR - Error processing single file for message 1204: Telegram says: [400 BUTTON_URL_INVALID] - The button url is invalid (caused by "messages.SendMessage")
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\bot\plugins\stream.py", line 419, in process_single
+    await send_link(msg, links)
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\bot\plugins\stream.py", line 166, in send_link
+    await msg.reply_text(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\types\messages_and_media\message.py", line 970, in reply_text
+    return await self._client.send_message(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\methods\messages\send_message.py", line 126, in send_message
+    r = await self.invoke(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\methods\advanced\invoke.py", line 79, in invoke
+    r = await self.session.invoke(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\session\session.py", line 389, in invoke
+    return await self.send(query, timeout=timeout)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\session\session.py", line 357, in send
+    RPCError.raise_it(result, type(data))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\errors\rpc_error.py", line 91, in raise_it
+    raise getattr(
+pyrogram.errors.exceptions.bad_request_400.ButtonUrlInvalid: Telegram says: [400 BUTTON_URL_INVALID] - The button url is invalid (caused by "messages.SendMessage")
+2026-03-19 14:00:09,423 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 14:00:09,620 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 14:00:13,652 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 14:00:15,183 - ThunderBot - DEBUG - User 7555349906 within rate limits, executing immediately.
+2026-03-19 14:18:43,022 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 14:19:51,578 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 14:19:51,788 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 14:19:55,813 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 14:21:18,526 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 14:21:18,718 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 14:21:22,743 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 14:25:51,573 - ThunderBot - DEBUG - Client error: InvalidHash - Invalid URL structure or missing hash
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 326, in media_delivery
+    message_id, secure_hash = parse_media_request(path, request.query)
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 72, in parse_media_request
+    raise InvalidHash("Invalid URL structure or missing hash")
+Thunder.server.exceptions.InvalidHash: Invalid URL structure or missing hash
+2026-03-19 14:26:55,076 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 14:26:55,254 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 14:26:59,155 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 14:27:55,978 - ThunderBot - ERROR - Error in topic_image_handler: 'Message' object has no attribute 'message_thread_id'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\bot\plugins\topics.py", line 86, in topic_image_handler
+    topic_id = msg.message_thread_id
+AttributeError: 'Message' object has no attribute 'message_thread_id'
+2026-03-19 14:27:55,980 - ThunderBot - ERROR - Error in topic_video_handler: 'Message' object has no attribute 'message_thread_id'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\bot\plugins\topics.py", line 38, in topic_video_handler
+    topic_id = msg.message_thread_id
+AttributeError: 'Message' object has no attribute 'message_thread_id'
+2026-03-19 14:35:24,925 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 14:35:25,107 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 14:35:29,260 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 14:36:06,514 - ThunderBot - ERROR - Error in topic_image_handler: 'Message' object has no attribute 'message_thread_id'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\bot\plugins\topics.py", line 88, in topic_image_handler
+    topic_id = msg.message_thread_id or msg.chat.id
+AttributeError: 'Message' object has no attribute 'message_thread_id'
+2026-03-19 14:36:09,745 - ThunderBot - ERROR - Error in topic_video_handler: 'Message' object has no attribute 'message_thread_id'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\bot\plugins\topics.py", line 39, in topic_video_handler
+    topic_id = msg.message_thread_id or msg.chat.id
+AttributeError: 'Message' object has no attribute 'message_thread_id'
+2026-03-19 14:37:17,132 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 14:37:17,323 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 14:37:21,340 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 14:37:32,198 - ThunderBot - ERROR - Error in topic_image_handler: 'Message' object has no attribute 'message_thread_id'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\bot\plugins\topics.py", line 94, in topic_image_handler
+    topic_id = msg.message_thread_id or msg.chat.id
+AttributeError: 'Message' object has no attribute 'message_thread_id'
+2026-03-19 14:37:32,199 - ThunderBot - ERROR - Error in topic_image_handler: 'Message' object has no attribute 'message_thread_id'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\bot\plugins\topics.py", line 94, in topic_image_handler
+    topic_id = msg.message_thread_id or msg.chat.id
+AttributeError: 'Message' object has no attribute 'message_thread_id'
+2026-03-19 14:37:32,199 - ThunderBot - INFO - VIDEO HANDLER TRIGGERED: msg_id=15674, chat_id=-1002795956983, video=True, document=False
+2026-03-19 14:37:32,199 - ThunderBot - ERROR - Error in topic_video_handler: 'Message' object has no attribute 'message_thread_id'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\bot\plugins\topics.py", line 44, in topic_video_handler
+    topic_id = msg.message_thread_id or msg.chat.id
+AttributeError: 'Message' object has no attribute 'message_thread_id'
+2026-03-19 14:38:13,241 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 14:38:13,470 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 14:38:17,552 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 14:38:50,400 - ThunderBot - INFO - VIDEO HANDLER TRIGGERED: msg_id=15676, chat_id=-1002795956983, video=True, document=False
+2026-03-19 14:38:50,400 - ThunderBot - INFO - Processing video: topic_id=15675, msg_id=15676
+2026-03-19 14:38:50,400 - ThunderBot - DEBUG - Could not get topic name for 15675: 'Client' object has no attribute 'get_forum_topic'
+2026-03-19 14:38:50,526 - ThunderBot - DEBUG - Added/Updated topic video: topic_id=15675, name=Topic 15675
+2026-03-19 14:38:50,526 - ThunderBot - INFO - Added video from topic 'Topic 15675' (ID: 15675)
+2026-03-19 14:38:51,039 - ThunderBot - DEBUG - Added topic image: topic_id=15675, msg_id=15677
+2026-03-19 14:38:51,039 - ThunderBot - DEBUG - Added image from topic ID: 15675
+2026-03-19 14:38:57,814 - ThunderBot - ERROR - Error in get_random_topic_thumbnail for topic 15675: 'coroutine' object has no attribute 'to_list'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\utils\database.py", line 296, in get_random_topic_thumbnail
+    result = await cursor.to_list(length=1)
+AttributeError: 'coroutine' object has no attribute 'to_list'
+2026-03-19 14:39:00,589 - ThunderBot - DEBUG - Client error: InvalidHash - Invalid URL structure or missing hash
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 326, in media_delivery
+    message_id, secure_hash = parse_media_request(path, request.query)
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 72, in parse_media_request
+    raise InvalidHash("Invalid URL structure or missing hash")
+Thunder.server.exceptions.InvalidHash: Invalid URL structure or missing hash
+2026-03-19 14:39:06,653 - ThunderBot - ERROR - Error in get_random_topic_thumbnail for topic 15675: 'coroutine' object has no attribute 'to_list'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\utils\database.py", line 296, in get_random_topic_thumbnail
+    result = await cursor.to_list(length=1)
+AttributeError: 'coroutine' object has no attribute 'to_list'
+2026-03-19 14:41:58,713 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 14:41:58,909 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 14:42:02,981 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 14:42:07,373 - ThunderBot - DEBUG - Client error: InvalidHash - Invalid URL structure or missing hash
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 326, in media_delivery
+    message_id, secure_hash = parse_media_request(path, request.query)
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 72, in parse_media_request
+    raise InvalidHash("Invalid URL structure or missing hash")
+Thunder.server.exceptions.InvalidHash: Invalid URL structure or missing hash
+2026-03-19 14:42:11,267 - ThunderBot - DEBUG - Client error: InvalidHash - Invalid URL structure or missing hash
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 326, in media_delivery
+    message_id, secure_hash = parse_media_request(path, request.query)
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 72, in parse_media_request
+    raise InvalidHash("Invalid URL structure or missing hash")
+Thunder.server.exceptions.InvalidHash: Invalid URL structure or missing hash
+2026-03-19 14:42:14,796 - ThunderBot - DEBUG - Client error: InvalidHash - Invalid URL structure or missing hash
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 326, in media_delivery
+    message_id, secure_hash = parse_media_request(path, request.query)
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 72, in parse_media_request
+    raise InvalidHash("Invalid URL structure or missing hash")
+Thunder.server.exceptions.InvalidHash: Invalid URL structure or missing hash
+2026-03-19 14:42:29,094 - ThunderBot - DEBUG - Client error: InvalidHash - Invalid URL structure or missing hash
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 326, in media_delivery
+    message_id, secure_hash = parse_media_request(path, request.query)
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 72, in parse_media_request
+    raise InvalidHash("Invalid URL structure or missing hash")
+Thunder.server.exceptions.InvalidHash: Invalid URL structure or missing hash
+2026-03-19 14:43:58,287 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 14:43:58,502 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 14:44:02,642 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 14:45:43,451 - ThunderBot - DEBUG - Client error: InvalidHash - Invalid URL structure or missing hash
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 326, in media_delivery
+    message_id, secure_hash = parse_media_request(path, request.query)
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 72, in parse_media_request
+    raise InvalidHash("Invalid URL structure or missing hash")
+Thunder.server.exceptions.InvalidHash: Invalid URL structure or missing hash
+2026-03-19 14:45:47,373 - ThunderBot - DEBUG - Client error: InvalidHash - Invalid URL structure or missing hash
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 326, in media_delivery
+    message_id, secure_hash = parse_media_request(path, request.query)
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 72, in parse_media_request
+    raise InvalidHash("Invalid URL structure or missing hash")
+Thunder.server.exceptions.InvalidHash: Invalid URL structure or missing hash
+2026-03-19 14:46:30,995 - ThunderBot - INFO - VIDEO HANDLER TRIGGERED: msg_id=15680, chat_id=-1002795956983, video=True, document=False
+2026-03-19 14:46:30,995 - ThunderBot - INFO - Processing video: topic_id=15678, msg_id=15680
+2026-03-19 14:46:30,995 - ThunderBot - INFO - Extracted topic name: Topic 15678
+2026-03-19 14:46:31,103 - ThunderBot - DEBUG - Added topic image: topic_id=15678, msg_id=15679
+2026-03-19 14:46:31,103 - ThunderBot - DEBUG - Added image from topic ID: 15678
+2026-03-19 14:46:31,630 - ThunderBot - DEBUG - Added/Updated topic video: topic_id=15678, name=Topic 15678
+2026-03-19 14:46:31,630 - ThunderBot - INFO - Added video from topic 'Topic 15678' (ID: 15678)
+2026-03-19 14:46:41,358 - ThunderBot - DEBUG - Client error: InvalidHash - Invalid URL structure or missing hash
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 326, in media_delivery
+    message_id, secure_hash = parse_media_request(path, request.query)
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 72, in parse_media_request
+    raise InvalidHash("Invalid URL structure or missing hash")
+Thunder.server.exceptions.InvalidHash: Invalid URL structure or missing hash
+2026-03-19 14:48:16,214 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 14:48:16,404 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 14:48:20,530 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 14:48:55,324 - ThunderBot - INFO - VIDEO HANDLER TRIGGERED: msg_id=15683, chat_id=-1002795956983, video=True, document=False
+2026-03-19 14:48:55,324 - ThunderBot - INFO - Processing video: topic_id=15681, msg_id=15683
+2026-03-19 14:48:55,324 - ThunderBot - DEBUG - Extracting name: caption=None, video=True, document=False
+2026-03-19 14:48:55,324 - ThunderBot - DEBUG - Video file_name: None
+2026-03-19 14:48:55,324 - ThunderBot - INFO - Extracted topic name: Topic 15681
+2026-03-19 14:48:55,431 - ThunderBot - DEBUG - Added topic image: topic_id=15681, msg_id=15682
+2026-03-19 14:48:55,431 - ThunderBot - DEBUG - Added image from topic ID: 15681
+2026-03-19 14:48:55,902 - ThunderBot - DEBUG - Added/Updated topic video: topic_id=15681, name=Topic 15681
+2026-03-19 14:48:55,902 - ThunderBot - INFO - Added video from topic 'Topic 15681' (ID: 15681)
+2026-03-19 14:49:05,653 - ThunderBot - DEBUG - Client error: InvalidHash - Invalid URL structure or missing hash
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 326, in media_delivery
+    message_id, secure_hash = parse_media_request(path, request.query)
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 72, in parse_media_request
+    raise InvalidHash("Invalid URL structure or missing hash")
+Thunder.server.exceptions.InvalidHash: Invalid URL structure or missing hash
+2026-03-19 14:51:36,931 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 14:51:37,149 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 14:51:41,146 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 14:52:07,214 - ThunderBot - INFO - VIDEO HANDLER TRIGGERED: msg_id=15685, chat_id=-1002795956983, video=True, document=False
+2026-03-19 14:52:07,214 - ThunderBot - INFO - Processing video: topic_id=15684, msg_id=15685
+2026-03-19 14:52:07,214 - ThunderBot - DEBUG - Could not get topic name: 'Message' object has no attribute 'forum_topic_created'
+2026-03-19 14:52:07,214 - ThunderBot - INFO - Topic name: Topic 15684
+2026-03-19 14:52:07,327 - ThunderBot - DEBUG - Added/Updated topic video: topic_id=15684, name=Topic 15684
+2026-03-19 14:52:07,327 - ThunderBot - INFO - Added video from topic 'Topic 15684' (ID: 15684)
+2026-03-19 14:52:07,824 - ThunderBot - DEBUG - Added topic image: topic_id=15684, msg_id=15686
+2026-03-19 14:52:07,824 - ThunderBot - DEBUG - Added image from topic ID: 15684
+2026-03-19 14:52:17,050 - ThunderBot - DEBUG - Client error: InvalidHash - Invalid URL structure or missing hash
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 326, in media_delivery
+    message_id, secure_hash = parse_media_request(path, request.query)
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 72, in parse_media_request
+    raise InvalidHash("Invalid URL structure or missing hash")
+Thunder.server.exceptions.InvalidHash: Invalid URL structure or missing hash
+2026-03-19 14:54:05,418 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 14:54:05,634 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 14:54:09,615 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 14:55:28,069 - ThunderBot - INFO - VIDEO HANDLER TRIGGERED: msg_id=15689, chat_id=-1002795956983, video=True, document=False
+2026-03-19 14:55:28,070 - ThunderBot - INFO - Processing video: topic_id=15687, msg_id=15689
+2026-03-19 14:55:28,070 - ThunderBot - DEBUG - get_forum_topic not available in this Pyrogram version
+2026-03-19 14:55:28,070 - ThunderBot - INFO - Topic name: Topic 15687
+2026-03-19 14:55:28,175 - ThunderBot - DEBUG - Added topic image: topic_id=15687, msg_id=15688
+2026-03-19 14:55:28,175 - ThunderBot - DEBUG - Added image from topic ID: 15687
+2026-03-19 14:55:28,675 - ThunderBot - DEBUG - Added/Updated topic video: topic_id=15687, name=Topic 15687
+2026-03-19 14:55:28,675 - ThunderBot - INFO - Added video from topic 'Topic 15687' (ID: 15687)
+2026-03-19 14:55:39,528 - ThunderBot - DEBUG - Client error: InvalidHash - Invalid URL structure or missing hash
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 326, in media_delivery
+    message_id, secure_hash = parse_media_request(path, request.query)
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 72, in parse_media_request
+    raise InvalidHash("Invalid URL structure or missing hash")
+Thunder.server.exceptions.InvalidHash: Invalid URL structure or missing hash
+2026-03-19 14:58:17,269 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 14:58:17,335 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 14:58:21,216 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 14:58:45,555 - ThunderBot - INFO - VIDEO HANDLER TRIGGERED: msg_id=15691, chat_id=-1002795956983, video=True, document=False
+2026-03-19 14:58:45,555 - ThunderBot - INFO - Processing video: topic_id=15690, msg_id=15691
+2026-03-19 14:58:45,555 - ThunderBot - DEBUG - get_forum_topic not available in this Pyrogram version
+2026-03-19 14:58:45,555 - ThunderBot - INFO - Topic name: Topic 15690
+2026-03-19 14:58:45,675 - ThunderBot - DEBUG - Added/Updated topic video: topic_id=15690, name=Topic 15690
+2026-03-19 14:58:45,675 - ThunderBot - INFO - Added video from topic 'Topic 15690' (ID: 15690)
+2026-03-19 14:58:46,172 - ThunderBot - DEBUG - Added topic image: topic_id=15690, msg_id=15692
+2026-03-19 14:58:46,172 - ThunderBot - DEBUG - Added image from topic ID: 15690
+2026-03-19 14:59:02,541 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 14:59:02,609 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 14:59:06,290 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 14:59:38,088 - ThunderBot - INFO - VIDEO HANDLER TRIGGERED: msg_id=15697, chat_id=-1002795956983, video=True, document=False
+2026-03-19 14:59:38,088 - ThunderBot - INFO - Processing video: topic_id=15696, msg_id=15697
+2026-03-19 14:59:38,173 - ThunderBot - DEBUG - Added topic image: topic_id=15696, msg_id=15698
+2026-03-19 14:59:38,173 - ThunderBot - DEBUG - Added image from topic ID: 15696
+2026-03-19 14:59:38,260 - ThunderBot - DEBUG - get_forum_topics failed: Telegram says: [400 BOT_METHOD_INVALID] (caused by "channels.GetForumTopics") Pyrogram 2.3.45 thinks: The method can't be used by bots
+2026-03-19 14:59:38,261 - ThunderBot - INFO - Topic name: Topic 15696
+2026-03-19 14:59:38,354 - ThunderBot - DEBUG - Added/Updated topic video: topic_id=15696, name=Topic 15696
+2026-03-19 14:59:38,354 - ThunderBot - INFO - Added video from topic 'Topic 15696' (ID: 15696)
+2026-03-19 15:03:31,992 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 15:03:32,060 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 15:03:35,851 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 15:20:00,844 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 15:20:00,916 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 15:20:04,767 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 15:20:29,160 - ThunderBot - DEBUG - Updated topic title: topic_id=15699, title=Vjbbvvbb
+2026-03-19 15:20:29,160 - ThunderBot - INFO - Updated topic 15699 title to: Vjbbvvbb
+2026-03-19 15:20:32,508 - ThunderBot - INFO - VIDEO HANDLER TRIGGERED: msg_id=15702, chat_id=-1002795956983, video=True, document=False
+2026-03-19 15:20:32,508 - ThunderBot - INFO - Processing video: topic_id=15699, msg_id=15702
+2026-03-19 15:20:32,703 - ThunderBot - DEBUG - Added/Updated topic video: topic_id=15699, name=Topic 15699
+2026-03-19 15:20:32,704 - ThunderBot - INFO - Added video from topic 'Topic 15699' (ID: 15699)
+2026-03-19 15:20:33,106 - ThunderBot - DEBUG - Added topic image: topic_id=15699, msg_id=15701
+2026-03-19 15:20:33,106 - ThunderBot - DEBUG - Added image from topic ID: 15699
+2026-03-19 15:21:52,558 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 15:21:52,640 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 15:21:56,627 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 15:22:18,106 - ThunderBot - DEBUG - Updated topic title: topic_id=15703, title=Hhvgvvb
+2026-03-19 15:22:18,106 - ThunderBot - INFO - Updated topic 15703 title to: Hhvgvvb
+2026-03-19 15:22:21,714 - ThunderBot - INFO - VIDEO HANDLER TRIGGERED: msg_id=15706, chat_id=-1002795956983, video=True, document=False
+2026-03-19 15:22:21,714 - ThunderBot - INFO - Processing video: topic_id=15703, msg_id=15706
+2026-03-19 15:22:21,804 - ThunderBot - DEBUG - Added topic image: topic_id=15703, msg_id=15705
+2026-03-19 15:22:21,804 - ThunderBot - DEBUG - Added image from topic ID: 15703
+2026-03-19 15:22:22,322 - ThunderBot - INFO - Existing topic data: None
+2026-03-19 15:22:22,322 - ThunderBot - INFO - No existing topic found, using: Topic 15703
+2026-03-19 15:22:22,414 - ThunderBot - DEBUG - Added/Updated topic video: topic_id=15703, name=Topic 15703
+2026-03-19 15:22:22,414 - ThunderBot - INFO - Added video from topic 'Topic 15703' (ID: 15703)
+2026-03-19 15:23:42,361 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 15:23:42,435 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 15:23:46,240 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 15:24:01,913 - ThunderBot - DEBUG - Updated topic title: topic_id=15707, title=Hello Ho Gaya hai na ki korbo
+2026-03-19 15:24:01,914 - ThunderBot - INFO - Updated topic 15707 title to: Hello Ho Gaya hai na ki korbo
+2026-03-19 15:24:06,214 - ThunderBot - INFO - VIDEO HANDLER TRIGGERED: msg_id=15710, chat_id=-1002795956983, video=True, document=False
+2026-03-19 15:24:06,214 - ThunderBot - INFO - Processing video: topic_id=15707, msg_id=15710
+2026-03-19 15:24:06,303 - ThunderBot - DEBUG - Added topic image: topic_id=15707, msg_id=15709
+2026-03-19 15:24:06,303 - ThunderBot - DEBUG - Added image from topic ID: 15707
+2026-03-19 15:24:06,800 - ThunderBot - INFO - Existing topic data: {'_id': ObjectId('69bc0701ace01fe6e260b000'), 'topic_id': 15707, 'created_at': datetime.datetime(2026, 3, 19, 14, 24, 1, 801000), 'group_id': -1002795956983, 'topic_name': 'Hello Ho Gaya hai na ki korbo', 'updated_at': datetime.datetime(2026, 3, 19, 14, 24, 1, 801000)}
+2026-03-19 15:24:06,800 - ThunderBot - INFO - Found existing name: Hello Ho Gaya hai na ki korbo
+2026-03-19 15:24:06,800 - ThunderBot - INFO - Using existing topic title: Hello Ho Gaya hai na ki korbo
+2026-03-19 15:24:06,894 - ThunderBot - DEBUG - Added/Updated topic video: topic_id=15707, name=Hello Ho Gaya hai na ki korbo
+2026-03-19 15:24:06,894 - ThunderBot - INFO - Added video from topic 'Hello Ho Gaya hai na ki korbo' (ID: 15707)
+2026-03-19 15:24:15,327 - ThunderBot - DEBUG - Client error: InvalidHash - Invalid URL structure or missing hash
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 326, in media_delivery
+    message_id, secure_hash = parse_media_request(path, request.query)
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 72, in parse_media_request
+    raise InvalidHash("Invalid URL structure or missing hash")
+Thunder.server.exceptions.InvalidHash: Invalid URL structure or missing hash
+2026-03-19 15:26:17,549 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 15:26:17,612 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 15:26:21,200 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 15:26:24,680 - ThunderBot - DEBUG - Client error: InvalidHash - Invalid URL structure or missing hash
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 326, in media_delivery
+    message_id, secure_hash = parse_media_request(path, request.query)
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 72, in parse_media_request
+    raise InvalidHash("Invalid URL structure or missing hash")
+Thunder.server.exceptions.InvalidHash: Invalid URL structure or missing hash
+2026-03-19 15:26:28,177 - ThunderBot - DEBUG - Client error: InvalidHash - Invalid URL structure or missing hash
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 326, in media_delivery
+    message_id, secure_hash = parse_media_request(path, request.query)
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 72, in parse_media_request
+    raise InvalidHash("Invalid URL structure or missing hash")
+Thunder.server.exceptions.InvalidHash: Invalid URL structure or missing hash
+2026-03-19 15:26:49,346 - ThunderBot - DEBUG - Updated topic title: topic_id=15711, title=Gjhhuh hhvvvbb
+2026-03-19 15:26:49,346 - ThunderBot - INFO - Updated topic 15711 title to: Gjhhuh hhvvvbb
+2026-03-19 15:26:52,819 - ThunderBot - INFO - VIDEO HANDLER TRIGGERED: msg_id=15714, chat_id=-1002795956983, video=True, document=False
+2026-03-19 15:26:52,819 - ThunderBot - INFO - Processing video: topic_id=15711, msg_id=15714
+2026-03-19 15:26:52,910 - ThunderBot - INFO - Existing topic data: {'_id': ObjectId('69bc07a9ace01fe6e260b01c'), 'topic_id': 15711, 'created_at': datetime.datetime(2026, 3, 19, 14, 26, 49, 238000), 'group_id': -1002795956983, 'topic_name': 'Gjhhuh hhvvvbb', 'updated_at': datetime.datetime(2026, 3, 19, 14, 26, 49, 238000)}
+2026-03-19 15:26:52,910 - ThunderBot - INFO - Found existing name: Gjhhuh hhvvvbb
+2026-03-19 15:26:52,910 - ThunderBot - INFO - Using existing topic title: Gjhhuh hhvvvbb
+2026-03-19 15:26:53,003 - ThunderBot - DEBUG - Added/Updated topic video: topic_id=15711, name=Gjhhuh hhvvvbb
+2026-03-19 15:26:53,003 - ThunderBot - INFO - Added video from topic 'Gjhhuh hhvvvbb' (ID: 15711)
+2026-03-19 15:26:53,437 - ThunderBot - DEBUG - Added topic image: topic_id=15711, msg_id=15713
+2026-03-19 15:26:53,437 - ThunderBot - DEBUG - Added image from topic ID: 15711
+2026-03-19 15:27:07,545 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 15:27:07,624 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 15:27:11,664 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 15:27:11,880 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15714/Gjhhuh_hhvvvbb.mp4
+2026-03-19 15:27:11,976 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15710/Hello_Ho_Gaya_hai_na_ki_korbo.mp4
+2026-03-19 15:27:12,072 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15706/Topic_15703.mp4
+2026-03-19 15:27:12,169 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15702/Topic_15699.mp4
+2026-03-19 15:27:12,265 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15697/Topic_15696.mp4
+2026-03-19 15:27:12,361 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15691/Topic_15690.mp4
+2026-03-19 15:27:12,466 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15689/Topic_15687.mp4
+2026-03-19 15:27:12,562 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15685/Topic_15684.mp4
+2026-03-19 15:27:12,658 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15683/Topic_15681.mp4
+2026-03-19 15:27:12,754 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15680/Topic_15678.mp4
+2026-03-19 15:27:12,850 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15676/Topic_15675.mp4
+2026-03-19 15:27:15,903 - ThunderBot - DEBUG - Client error: InvalidHash - Invalid URL structure or missing hash
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 329, in media_delivery
+    message_id, secure_hash = parse_media_request(path, request.query)
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 72, in parse_media_request
+    raise InvalidHash("Invalid URL structure or missing hash")
+Thunder.server.exceptions.InvalidHash: Invalid URL structure or missing hash
+2026-03-19 15:28:08,528 - ThunderBot - DEBUG - Client error: InvalidHash - Invalid URL structure or missing hash
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 329, in media_delivery
+    message_id, secure_hash = parse_media_request(path, request.query)
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 72, in parse_media_request
+    raise InvalidHash("Invalid URL structure or missing hash")
+Thunder.server.exceptions.InvalidHash: Invalid URL structure or missing hash
+2026-03-19 15:28:16,290 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15714/Gjhhuh_hhvvvbb.mp4
+2026-03-19 15:28:16,387 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15710/Hello_Ho_Gaya_hai_na_ki_korbo.mp4
+2026-03-19 15:28:16,483 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15706/Topic_15703.mp4
+2026-03-19 15:28:16,578 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15702/Topic_15699.mp4
+2026-03-19 15:28:16,675 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15697/Topic_15696.mp4
+2026-03-19 15:28:16,772 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15691/Topic_15690.mp4
+2026-03-19 15:28:16,868 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15689/Topic_15687.mp4
+2026-03-19 15:28:16,964 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15685/Topic_15684.mp4
+2026-03-19 15:28:17,060 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15683/Topic_15681.mp4
+2026-03-19 15:28:17,155 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15680/Topic_15678.mp4
+2026-03-19 15:28:17,252 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15676/Topic_15675.mp4
+2026-03-19 15:28:18,845 - ThunderBot - DEBUG - Client error: InvalidHash - Invalid URL structure or missing hash
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 329, in media_delivery
+    message_id, secure_hash = parse_media_request(path, request.query)
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 72, in parse_media_request
+    raise InvalidHash("Invalid URL structure or missing hash")
+Thunder.server.exceptions.InvalidHash: Invalid URL structure or missing hash
+2026-03-19 15:28:23,643 - ThunderBot - DEBUG - Client error: InvalidHash - Invalid URL structure or missing hash
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 329, in media_delivery
+    message_id, secure_hash = parse_media_request(path, request.query)
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 72, in parse_media_request
+    raise InvalidHash("Invalid URL structure or missing hash")
+Thunder.server.exceptions.InvalidHash: Invalid URL structure or missing hash
+2026-03-19 15:28:27,143 - ThunderBot - DEBUG - Client error: InvalidHash - Invalid URL structure or missing hash
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 329, in media_delivery
+    message_id, secure_hash = parse_media_request(path, request.query)
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 72, in parse_media_request
+    raise InvalidHash("Invalid URL structure or missing hash")
+Thunder.server.exceptions.InvalidHash: Invalid URL structure or missing hash
+2026-03-19 15:28:31,362 - ThunderBot - DEBUG - Client error: InvalidHash - Invalid URL structure or missing hash
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 329, in media_delivery
+    message_id, secure_hash = parse_media_request(path, request.query)
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 72, in parse_media_request
+    raise InvalidHash("Invalid URL structure or missing hash")
+Thunder.server.exceptions.InvalidHash: Invalid URL structure or missing hash
+2026-03-19 15:29:28,977 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 15:29:29,049 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 15:29:33,140 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 15:29:35,267 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15714/Gjhhuh_hhvvvbb.mp4
+2026-03-19 15:29:35,361 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15710/Hello_Ho_Gaya_hai_na_ki_korbo.mp4
+2026-03-19 15:29:35,456 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15706/Topic_15703.mp4
+2026-03-19 15:29:35,551 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15702/Topic_15699.mp4
+2026-03-19 15:29:35,645 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15697/Topic_15696.mp4
+2026-03-19 15:29:35,741 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15691/Topic_15690.mp4
+2026-03-19 15:29:35,836 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15689/Topic_15687.mp4
+2026-03-19 15:29:35,931 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15685/Topic_15684.mp4
+2026-03-19 15:29:36,026 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15683/Topic_15681.mp4
+2026-03-19 15:29:36,120 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15680/Topic_15678.mp4
+2026-03-19 15:29:36,215 - ThunderBot - INFO - Gallery stream URL: http://127.0.0.1:8000/group/-1002795956983/15676/Topic_15675.mp4
+2026-03-19 15:29:38,706 - ThunderBot - INFO - Media delivery called with path: group/-1002795956983/15714/Gjhhuh_hhvvvbb.mp4
+2026-03-19 15:29:38,706 - ThunderBot - DEBUG - Client error: InvalidHash - Invalid URL structure or missing hash
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 330, in media_delivery
+    message_id, secure_hash = parse_media_request(path, request.query)
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 72, in parse_media_request
+    raise InvalidHash("Invalid URL structure or missing hash")
+Thunder.server.exceptions.InvalidHash: Invalid URL structure or missing hash
+2026-03-19 15:29:57,022 - ThunderBot - DEBUG - Updated topic title: topic_id=15715, title=Gjhhvhhhhh
+2026-03-19 15:29:57,022 - ThunderBot - INFO - Updated topic 15715 title to: Gjhhvhhhhh
+2026-03-19 15:30:00,703 - ThunderBot - INFO - VIDEO HANDLER TRIGGERED: msg_id=15718, chat_id=-1002795956983, video=True, document=False
+2026-03-19 15:30:00,703 - ThunderBot - INFO - Processing video: topic_id=15715, msg_id=15718
+2026-03-19 15:30:00,797 - ThunderBot - INFO - Existing topic data: {'_id': ObjectId('69bc0864ace01fe6e260b050'), 'topic_id': 15715, 'created_at': datetime.datetime(2026, 3, 19, 14, 29, 56, 910000), 'group_id': -1002795956983, 'topic_name': 'Gjhhvhhhhh', 'updated_at': datetime.datetime(2026, 3, 19, 14, 29, 56, 910000)}
+2026-03-19 15:30:00,797 - ThunderBot - INFO - Found existing name: Gjhhvhhhhh
+2026-03-19 15:30:00,797 - ThunderBot - INFO - Using existing topic title: Gjhhvhhhhh
+2026-03-19 15:30:00,894 - ThunderBot - DEBUG - Added/Updated topic video: topic_id=15715, name=Gjhhvhhhhh
+2026-03-19 15:30:00,894 - ThunderBot - INFO - Added video from topic 'Gjhhvhhhhh' (ID: 15715)
+2026-03-19 15:30:01,293 - ThunderBot - DEBUG - Added topic image: topic_id=15715, msg_id=15717
+2026-03-19 15:30:01,293 - ThunderBot - DEBUG - Added image from topic ID: 15715
+2026-03-19 15:32:29,691 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 15:32:29,785 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 15:32:33,521 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 15:32:33,893 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15718/Gjhhvhhhhh.mp4
+2026-03-19 15:32:33,982 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15714/Gjhhuh_hhvvvbb.mp4
+2026-03-19 15:32:34,071 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15710/Hello_Ho_Gaya_hai_na_ki_korbo.mp4
+2026-03-19 15:32:34,160 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15706/Topic_15703.mp4
+2026-03-19 15:32:34,249 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15702/Topic_15699.mp4
+2026-03-19 15:32:34,338 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15697/Topic_15696.mp4
+2026-03-19 15:32:34,427 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15691/Topic_15690.mp4
+2026-03-19 15:32:34,516 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15689/Topic_15687.mp4
+2026-03-19 15:32:34,605 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15685/Topic_15684.mp4
+2026-03-19 15:32:34,694 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15683/Topic_15681.mp4
+2026-03-19 15:32:34,782 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15680/Topic_15678.mp4
+2026-03-19 15:32:34,872 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15676/Topic_15675.mp4
+2026-03-19 15:32:47,998 - ThunderBot - DEBUG - Updated topic title: topic_id=15719, title=Ghvcvbbbvv
+2026-03-19 15:32:47,999 - ThunderBot - INFO - Updated topic 15719 title to: Ghvcvbbbvv
+2026-03-19 15:32:51,320 - ThunderBot - INFO - VIDEO HANDLER TRIGGERED: msg_id=15722, chat_id=-1002795956983, video=True, document=False
+2026-03-19 15:32:51,320 - ThunderBot - INFO - Processing video: topic_id=15719, msg_id=15722
+2026-03-19 15:32:51,398 - ThunderBot - DEBUG - Added topic image: topic_id=15719, msg_id=15721
+2026-03-19 15:32:51,398 - ThunderBot - DEBUG - Added image from topic ID: 15719
+2026-03-19 15:32:51,914 - ThunderBot - INFO - Existing topic data: {'_id': ObjectId('69bc090face01fe6e260b06b'), 'topic_id': 15719, 'created_at': datetime.datetime(2026, 3, 19, 14, 32, 47, 893000), 'group_id': -1002795956983, 'topic_name': 'Ghvcvbbbvv', 'updated_at': datetime.datetime(2026, 3, 19, 14, 32, 47, 893000)}
+2026-03-19 15:32:51,915 - ThunderBot - INFO - Found existing name: Ghvcvbbbvv
+2026-03-19 15:32:51,915 - ThunderBot - INFO - Using existing topic title: Ghvcvbbbvv
+2026-03-19 15:32:52,229 - ThunderBot - INFO - Forwarded video to BIN_CHANNEL: 25
+2026-03-19 15:32:52,326 - ThunderBot - DEBUG - Added/Updated topic video: topic_id=15719, name=Ghvcvbbbvv, bin_msg=25
+2026-03-19 15:32:52,326 - ThunderBot - INFO - Added video from topic 'Ghvcvbbbvv' (ID: 15719)
+2026-03-19 15:33:00,935 - ThunderBot - ERROR - Gallery error eb6a4164684a: cannot import name 'generate_secure_hash' from 'Thunder.utils.render_template' (C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\utils\render_template.py)
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\gallery_routes.py", line 57, in gallery_page
+    from Thunder.utils.render_template import generate_secure_hash
+ImportError: cannot import name 'generate_secure_hash' from 'Thunder.utils.render_template' (C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\utils\render_template.py)
+2026-03-19 15:33:03,465 - ThunderBot - ERROR - Gallery error c4cf07066901: cannot import name 'generate_secure_hash' from 'Thunder.utils.render_template' (C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\utils\render_template.py)
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\gallery_routes.py", line 57, in gallery_page
+    from Thunder.utils.render_template import generate_secure_hash
+ImportError: cannot import name 'generate_secure_hash' from 'Thunder.utils.render_template' (C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\utils\render_template.py)
+2026-03-19 15:33:06,135 - ThunderBot - ERROR - Gallery error 84513acdc763: cannot import name 'generate_secure_hash' from 'Thunder.utils.render_template' (C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\utils\render_template.py)
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\gallery_routes.py", line 57, in gallery_page
+    from Thunder.utils.render_template import generate_secure_hash
+ImportError: cannot import name 'generate_secure_hash' from 'Thunder.utils.render_template' (C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\utils\render_template.py)
+2026-03-19 15:36:22,520 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 15:36:22,617 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 15:36:26,475 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 15:36:27,001 - ThunderBot - INFO - Gallery stream URL (BIN_CHANNEL): http://127.0.0.1:8000/AgADKB25/Ghvcvbbbvv.mp4
+2026-03-19 15:36:27,097 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15718/Gjhhvhhhhh.mp4
+2026-03-19 15:36:27,193 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15714/Gjhhuh_hhvvvbb.mp4
+2026-03-19 15:36:27,290 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15710/Hello_Ho_Gaya_hai_na_ki_korbo.mp4
+2026-03-19 15:36:27,386 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15706/Topic_15703.mp4
+2026-03-19 15:36:27,483 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15702/Topic_15699.mp4
+2026-03-19 15:36:27,579 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15697/Topic_15696.mp4
+2026-03-19 15:36:27,675 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15691/Topic_15690.mp4
+2026-03-19 15:36:27,770 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15689/Topic_15687.mp4
+2026-03-19 15:36:27,866 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15685/Topic_15684.mp4
+2026-03-19 15:36:27,962 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15683/Topic_15681.mp4
+2026-03-19 15:36:28,058 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15680/Topic_15678.mp4
+2026-03-19 15:36:28,154 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15676/Topic_15675.mp4
+2026-03-19 15:36:30,747 - ThunderBot - INFO - Media delivery called with path: AgADKB25/Ghvcvbbbvv.mp4
+2026-03-19 15:36:33,027 - ThunderBot - INFO - Media delivery called with path: AgADKB25/Ghvcvbbbvv.mp4
+2026-03-19 15:36:35,508 - ThunderBot - INFO - Media delivery called with path: AgADKB25/Ghvcvbbbvv.mp4
+2026-03-19 15:36:37,524 - ThunderBot - INFO - Media delivery called with path: AgADKB25/Ghvcvbbbvv.mp4
+2026-03-19 15:36:39,743 - ThunderBot - INFO - Media delivery called with path: favicon.ico
+2026-03-19 15:36:39,743 - ThunderBot - DEBUG - Client error: InvalidHash - Invalid URL structure or missing hash
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 330, in media_delivery
+    message_id, secure_hash = parse_media_request(path, request.query)
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\stream_routes.py", line 72, in parse_media_request
+    raise InvalidHash("Invalid URL structure or missing hash")
+Thunder.server.exceptions.InvalidHash: Invalid URL structure or missing hash
+2026-03-19 15:46:08,562 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 15:46:08,634 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 15:46:12,338 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 15:46:28,175 - ThunderBot - INFO - Gallery stream URL (BIN_CHANNEL): http://127.0.0.1:8000/AgADKB25/Ghvcvbbbvv.mp4
+2026-03-19 15:46:28,266 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15718/Gjhhvhhhhh.mp4
+2026-03-19 15:46:28,357 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15714/Gjhhuh_hhvvvbb.mp4
+2026-03-19 15:46:28,446 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15710/Hello_Ho_Gaya_hai_na_ki_korbo.mp4
+2026-03-19 15:46:28,537 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15706/Topic_15703.mp4
+2026-03-19 15:46:28,627 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15702/Topic_15699.mp4
+2026-03-19 15:46:28,718 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15697/Topic_15696.mp4
+2026-03-19 15:46:28,808 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15691/Topic_15690.mp4
+2026-03-19 15:46:28,899 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15689/Topic_15687.mp4
+2026-03-19 15:46:28,990 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15685/Topic_15684.mp4
+2026-03-19 15:46:29,080 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15683/Topic_15681.mp4
+2026-03-19 15:46:29,170 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15680/Topic_15678.mp4
+2026-03-19 15:46:29,261 - ThunderBot - INFO - Gallery stream URL (group): http://127.0.0.1:8000/group/-1002795956983/15676/Topic_15675.mp4
+2026-03-19 15:48:00,553 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 15:48:00,614 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 15:48:04,270 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 15:48:04,294 - ThunderBot - DEBUG - Request executor cancelled, shutting down.
+2026-03-19 15:48:04,302 - ThunderBot - ERROR - Error stopping client: Client is already terminated
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\__main__.py", line 187, in start_services
+    await site.start()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\aiohttp\web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1519, in create_server
+    raise OSError(err.errno, 'error while attempting '
+OSError: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8000): only one usage of each socket address (protocol/network address/port) is normally permitted
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\bot\clients.py", line 17, in cleanup_clients
+    await client.stop()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\methods\utilities\stop.py", line 66, in stop
+    await do_it()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\methods\utilities\stop.py", line 62, in do_it
+    await self.terminate()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pyrogram\methods\auth\terminate.py", line 41, in terminate
+    raise ConnectionError("Client is already terminated")
+ConnectionError: Client is already terminated
+2026-03-19 15:48:04,303 - ThunderBot - DEBUG - Shutting down rate limiter and clearing queues...
+2026-03-19 15:48:04,303 - ThunderBot - DEBUG - Rate limiter queues cleared.
+2026-03-19 15:55:40,599 - ThunderBot - INFO - Media delivery called with path: AgADKB25/Ghvcvbbbvv.mp4
+2026-03-19 15:55:47,363 - ThunderBot - INFO - Media delivery called with path: AgADKB25/Ghvcvbbbvv.mp4
+2026-03-19 15:55:49,327 - ThunderBot - INFO - Media delivery called with path: AgADKB25/Ghvcvbbbvv.mp4
+2026-03-19 15:55:54,537 - ThunderBot - ERROR - Error fetching thumbnail: Not Found
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\gallery_routes.py", line 523, in gallery_thumbnail
+    raise web.HTTPNotFound(text="Thumbnail not found")
+aiohttp.web_exceptions.HTTPNotFound: Not Found
+2026-03-19 15:55:54,589 - ThunderBot - ERROR - Error fetching thumbnail: Not Found
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\gallery_routes.py", line 523, in gallery_thumbnail
+    raise web.HTTPNotFound(text="Thumbnail not found")
+aiohttp.web_exceptions.HTTPNotFound: Not Found
+2026-03-19 15:55:54,618 - ThunderBot - ERROR - Error fetching thumbnail: Not Found
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\gallery_routes.py", line 523, in gallery_thumbnail
+    raise web.HTTPNotFound(text="Thumbnail not found")
+aiohttp.web_exceptions.HTTPNotFound: Not Found
+2026-03-19 15:55:54,650 - ThunderBot - ERROR - Error fetching thumbnail: Not Found
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\gallery_routes.py", line 523, in gallery_thumbnail
+    raise web.HTTPNotFound(text="Thumbnail not found")
+aiohttp.web_exceptions.HTTPNotFound: Not Found
+2026-03-19 15:55:55,184 - ThunderBot - ERROR - Error fetching thumbnail: Not Found
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\gallery_routes.py", line 523, in gallery_thumbnail
+    raise web.HTTPNotFound(text="Thumbnail not found")
+aiohttp.web_exceptions.HTTPNotFound: Not Found
+2026-03-19 15:55:55,212 - ThunderBot - ERROR - Error fetching thumbnail: Not Found
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Downloads\FileToLink-main\FileToLink-main\Thunder\server\gallery_routes.py", line 523, in gallery_thumbnail
+    raise web.HTTPNotFound(text="Thumbnail not found")
+aiohttp.web_exceptions.HTTPNotFound: Not Found
+2026-03-19 15:56:29,582 - ThunderBot - DEBUG - User 7555349906 within rate limits, executing immediately.
+2026-03-19 15:56:51,563 - ThunderBot - INFO - Media delivery called with path: AgAD0h26/sample-style_video_1.mp4
+2026-03-19 15:56:54,348 - ThunderBot - INFO - Media delivery called with path: AgAD0h26/sample-style_video_1.mp4
+2026-03-19 15:56:57,492 - ThunderBot - INFO - Media delivery called with path: AgAD0h26/sample-style_video_1.mp4
+2026-03-19 16:01:41,163 - ThunderBot - WARNING - WARNING: OWNER_ID is not set. No user will be granted owner access.
+2026-03-19 16:01:41,255 - ThunderBot - DEBUG - Rate limiter initialized: enabled=False, max_requests=2, period=60s, queue_size=100, global_enabled=False, max_global_requests=4
+2026-03-19 16:01:45,262 - ThunderBot - DEBUG - Request executor started.
+2026-03-19 16:03:26,085 - ThunderBot - INFO - VIDEO HANDLER TRIGGERED: msg_id=15726, chat_id=-1002795956983, video=True, document=False
+2026-03-19 16:03:26,085 - ThunderBot - INFO - Processing video: topic_id=15723, msg_id=15726
+2026-03-19 16:03:26,085 - ThunderBot - INFO - Using video file_name: sample-style_video_1.mp4
+2026-03-19 16:03:26,172 - ThunderBot - DEBUG - Updated topic title: topic_id=15723, title=Resmi Nair Giving Hard Blowjob To Her Boyfriend And Hard Fucked By Him And Cumming
+2026-03-19 16:03:26,172 - ThunderBot - INFO - Updated topic 15723 title to: Resmi Nair Giving Hard Blowjob To Her Boyfriend And Hard Fucked By Him And Cumming
+2026-03-19 16:03:26,685 - ThunderBot - DEBUG - Added topic image: topic_id=15723, msg_id=15725
+2026-03-19 16:03:26,685 - ThunderBot - DEBUG - Added image from topic ID: 15723
+2026-03-19 16:03:26,699 - ThunderBot - INFO - Existing topic data: {'_id': ObjectId('69bc103eace01fe6e260b128'), 'topic_id': 15723, 'created_at': datetime.datetime(2026, 3, 19, 15, 3, 26, 54000), 'group_id': -1002795956983, 'topic_name': 'Resmi Nair Giving Hard Blowjob To Her Boyfriend And Hard Fucked By Him And Cumming', 'updated_at': datetime.datetime(2026, 3, 19, 15, 3, 26, 54000)}
+2026-03-19 16:03:26,699 - ThunderBot - INFO - Found existing name: Resmi Nair Giving Hard Blowjob To Her Boyfriend And Hard Fucked By Him And Cumming
+2026-03-19 16:03:26,699 - ThunderBot - INFO - Using existing topic title: Resmi Nair Giving Hard Blowjob To Her Boyfriend And Hard Fucked By Him And Cumming
+2026-03-19 16:03:26,941 - ThunderBot - INFO - Forwarded video to BIN_CHANNEL: 28
+2026-03-19 16:03:27,040 - ThunderBot - DEBUG - Added/Updated topic video: topic_id=15723, name=Resmi Nair Giving Hard Blowjob To Her Boyfriend And Hard Fucked By Him And Cumming, bin_msg=28
+2026-03-19 16:03:27,040 - ThunderBot - INFO - Added video from topic 'Resmi Nair Giving Hard Blowjob To Her Boyfriend And Hard Fucked By Him And Cumming' (ID: 15723)
+2026-03-19 16:04:32,162 - ThunderBot - INFO - Media delivery called with path: AgADoy28/Resmi_Nair_Giving_Hard_Blowjob_To_Her_Boyfriend_An.mp4
